@@ -1,13 +1,5 @@
-# DotNetAssessment
-Assessment to test .Net developers. This is a simple project to assess how you structure a project and what kind of solutions you choose to general problems.
-
-## What is the test about?
-
-In order to evaluate your skills and coding style we would like you to develop a small .Net Framework webapp that consumes [Best Buy](https://developer.bestbuy.com/) API RESTFull services. Please use .Net Framework and note .Net Core. You are free to use MVC or other design patters based on your personal preference. 
-
-## What do I need to do?
-
-We would like to have a small website that consists of two screens.
+# Product App
+A product application built in ASP.NET MVC. The app uses api data from bestbuy.com and it displays produc catalogue with information about the items. The app also uses some JavaScript plugins to enhance user experience. I have made the front end design to the best of my ability. There are also unit test included.
 
 ### Pages:
 - Homepage (product list & search
@@ -34,47 +26,9 @@ We would like to have a small website that consists of two screens.
 	* A horizontal grid of 3 related products.
 	* A horizontal grid of 3 accessories.
 
-## Where do I start?
-
-* Get your API Key as explained within the [documentation](https://developer.bestbuy.com/get-started)
-
-> **Step 1: Get a key**
-
-> Before you can start using our APIs, you need an API key. It's easy. Just visit [GET API Key](https://developer.bestbuy.com/login) and sign up with your email address. 
-We'll send you an email with instructions on how to activate your new key. 
-Once you've activated your key, you're ready to roll.
-
-```
-If you have any issues getting the API Key, please contact us, and we will provide you with one.
-```
-
-* Check out the [Best Buy Api Documentation](https://developer.bestbuy.com/documentation) to learn how to get the information this test requires. 
-
-## How do I show you my work?
-
-* Fork this repository and work on your own fork.
-* When you think your app matches the requirements and you are proud of the code you are going to push, make a pull request to this repository. We will review your code and we will comment inline about your code.
-* In your pull request, add a description of the solution you have implemented and any other issue we should take into account at the time of review.
-
-## What should the project accomplish?
-
-* The application should compile without Error and run without crashing.
-* You are allowed to use third party Nugets. For any third-party used within the project there must be a justification of its use.
-* You have 1 week to present a pull request with a solution, but the sooner you present a solution the better.
-
-## What we're looking for
-
-* Knowledge of .Net Framewok
-* Knowledge of design patterns
-* Understanding of lightweight front-end
-* Clean and readable code, clear variable names
-
 ## Plus point
 
 * Pagination or load more for the products list
 * Use of design priciples
 * Animations
 * Unit Testing
-
-FirstFocus wishes you good luck and we are looking forward to see your code. 
-If you need any help, please do not hesitate to contact us!

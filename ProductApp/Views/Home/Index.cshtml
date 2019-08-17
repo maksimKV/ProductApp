@@ -1,0 +1,94 @@
+﻿@model ProductApp.ViewModels.HomeViewModel
+@{
+    ViewBag.Title = "Catalogue Page";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<hr />
+
+<div id="searchBar">
+    @using (Html.BeginForm("Index", "Home", FormMethod.Get, new { id = "searchForm" }))
+    {
+    <p>
+        <input type="hidden" name="pageNumber" value="1" />
+        <b><span class="blueText">Keyword:</span></b> @Html.TextBox("keyword", null, new { placeholder = "Search by keyword..."}) <br />
+
+        <div id="searchButtons">
+            <input type="submit" value="Search" />
+            <input type="button" value="Clear" id="clearForm">
+        </div>
+    </p>
+    }
+</div>
+
+<hr />
+
+<div id="productsPage">
+    <ul id="productsList">
+        @foreach (var product in Model.products)
+        {
+            <li class="productItem">
+                <img class="productThumb" src="@product.Thumbnail" alt="Product Thumbnail" width="150" height="150">
+                <p class="productName">@product.Name</p>
+
+                @{
+                    bool sale = (@product.RegularPrice != @product.SalePrice);
+                }
+
+                @if (sale)
+                {
+                    <p class="discountPrice"><b>Price: <span class="oldPrice">@product.RegularPrice</span></b></p>
+                    <p class="newPrice"><b>New Price: <span class="greenText">@product.SalePrice</span></b></p>
+                }
+                else
+                {
+                    <p class="productPagePrice"><b>Price: <span class="greenText">@product.RegularPrice</span></b></p>
+                }
+
+                <a href="/product/index?id=@product.SKU" class="viewProduct">View Product</a>
+            </li>
+
+            <hr />
+        }
+    </ul>
+</div>
+
+<div class="pagination-holder clearfix">
+    <div id="light-pagination" class="pagination light-theme simple-pagination">
+        <a class="previous">&laquo;</a>
+        @for (var i = 1; i < Model.pagesCount + 1; i++)
+        {
+            if (Model.pageNumber == i)
+            {
+                <a href="#" class="page-link active">@i</a>
+            }
+            else
+            {
+                <a href="#" class="page-link">@i</a>
+            }
+        }
+        <a class="next">&raquo;</a>
+    </div>
+</div>
+
+<script src="@Url.Content("~/Scripts/jquery-3.3.1.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.simplePagination.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.noConflict();
+
+        $("#light-pagination").pagination({
+            pages: @Model.pagesCount,
+            hrefTextPrefix: "/home/index?pageNumber=",
+            hrefTextSuffix: "&keyword=@Model.keyword",
+            displayedPages: 8,
+            currentPage: @Model.pageNumber,
+            cssStyle: 'light-theme'
+        });
+
+        $("#clearForm").click(function(){
+            window.location = "/Home/Index";
+        });
+    });
+</script>

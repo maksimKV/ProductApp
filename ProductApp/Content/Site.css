@@ -1,0 +1,183 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: lightslategray;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+    min-width: 1000px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+.pagination-holder {
+    text-align: center;
+}
+
+
+/* Styling the front page */
+#productsPage {
+    margin-top: 40px;
+}
+
+#searchBar {
+    padding-left: 40px;
+}
+#searchButtons {
+    margin-top: 15px;
+}
+
+#productsList {
+    list-style: none;
+    padding: 0;
+}
+
+.productItem {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.productThumb {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    border: 2px solid lightslategray;
+}
+
+.productName {
+    font-weight: bold;
+    color: green;
+}
+
+
+/* Styling product page */
+#productPageMainSection {
+    display: inline-block;
+    width: 100%;
+}
+
+.productPageImage {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    border: 2px solid lightslategray;
+}
+
+#productPageSecondSection {
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#priceSection {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+#reviewsSection {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+#relatedProductsList {
+    padding: 0;
+    display: table;
+    width: 100%;
+}
+
+.relatedProductItem {
+    display: block;
+    float: left;
+    width: 33%;
+}
+
+.relatedProductThumb {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    border: 2px solid lightslategray;
+    margin-bottom: 20px;
+}
+
+.viewProduct {
+    text-decoration: none;
+    font: menu;
+    display: inline-block;
+    font-size: 13px;
+    padding: 2px 6px;
+    background-image: linear-gradient(royalblue, deepskyblue);
+    border-style: solid;
+    border-width: 2px;
+    color: white;
+    border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+}
+
+.viewProduct:hover {
+    border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+    color: white;
+    text-decoration: none;
+}
+
+.viewProduct:active,
+.viewProduct:visited,
+.viewProduct:focus {
+    color: white;
+    text-decoration: none;
+}
+
+.productReviewsCount,
+.productAverageScore {
+    margin-left: 5px;
+}
+
+.noRelatedProducts {
+    text-align: center;
+}
+
+.oldPrice {
+    text-decoration: line-through;
+    color: red;
+}
+
+.blueText {
+    color: royalblue;
+    font-weight: bold;
+}
+
+.greenText {
+    color: green;
+    font-weight: bold;
+}
+
+#rateYo {
+    padding: 0;
+}
